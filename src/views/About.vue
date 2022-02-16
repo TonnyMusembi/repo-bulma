@@ -19,9 +19,16 @@
       </footer>
     </div>
   </div>
+  <div col="col-10">
+    <button class="primary is-primary" v-on:click="loginOn()">Login</button>
+  </div>
 </template>
 <script>
+import Footer from "@/views/Footer";
 export default {
+  computed: {
+    Footer,
+  },
   data() {
     return {
       open: false,
@@ -35,11 +42,15 @@ export default {
       this.open = false;
     },
     inGreet() {
-      fetch().then((response) => {
-        console.log(response).catch((error) => {
-          console.log(error);
-        });
-      });
+      this.open = true;
+      // fetch().then((response) => {
+      //   console.log(response).catch((error) => {
+      //     console.log(error);
+      //   });
+      // });
+    },
+    loginOn() {
+      this.open = true;
     },
   },
 };
