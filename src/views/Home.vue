@@ -14,6 +14,7 @@
       </div>
     </div>
   </div>
+  <div class="primary button">Login</div>
 </template>
 
 <script>
